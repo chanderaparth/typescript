@@ -97,21 +97,24 @@
 //     sqft: 500
 //   };
 //   printYardSize(home);
-// var NamedValue = /** @class */ (function () {
-//     function NamedValue(name) {
-//         this.name = name;
+// class NamedValue<T> {
+//     private _value: T | undefined;
+//     constructor(private name: string) {}
+//     public setValue(value: T) {
+//       this._value = value;
 //     }
-//     NamedValue.prototype.setValue = function (value) {
-//         this._value = value;
-//     };
-//     NamedValue.prototype.getValue = function () {
-//         return this._value;
-//     };
-//     NamedValue.prototype.toString = function () {
-//         return "".concat(this.name, ": ").concat(this._value);
-//     };
-//     return NamedValue;
-// }());
-// var value = new NamedValue('myNumber');
-// value.setValue(10);
-// console.log(value.toString());
+//     public getValue(): T | undefined {
+//       return this._value;
+//     }
+//     public toString(): string {
+//       return `${this.name}: ${this._value}`;
+//     }
+//   }
+//   const value = new NamedValue<number>('myNumber');
+//   value.setValue(10);
+//   console.log(value.toString());
+
+// var x = 'chandera parth';
+// console.log(x.length);
+
+
